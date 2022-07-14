@@ -11,7 +11,7 @@ function Form(){
     return (
         <form>
             <div class="bg-gradient-to-b from-white to-purple-200">
-                <div class="text-center antialiased bg-purple-600 text-white lg:h-32">
+                <div class="text-center antialiased bg-purple-600 text-white lg:h-32 bg-gradient-to-t from-purple-500 to-purple-700">
                     <Link to="/">
                         <p class="lg:pt-6 lg:text-2xl">Clients</p>
                     </Link>
@@ -44,7 +44,9 @@ function Form(){
                         <input class="text-center border-gray-500 lg:border-2 lg:pl-40 lg:pr-40 lg:pt-1 lg:pb-1 lg:mb-24 lg:mt-3.5" placeholder="Ex. +1 (760) 750-3008"
                             type="text"
                             onChange={(e) => {setphoneNumber(e.target.value)}}/>
-                <button class="lg:pt-2 text-center lg:pr-3.5 lg:pl-3 lg:pb-2 lg:text-2xl text-white bg-purple-700 lg:rounded-lg lg:mt-6 lg:mb-36" type="submit">Submit</button>
+                                <Link to="/">
+                                    <button class="lg:pt-2 text-center lg:pr-3.5 lg:pl-3 lg:pb-2 lg:text-2xl text-white bg-purple-700 lg:rounded-lg lg:mt-6 lg:mb-36" type="submit">Submit</button>
+                                </Link>
                 </div>
             </div>
         </form>
