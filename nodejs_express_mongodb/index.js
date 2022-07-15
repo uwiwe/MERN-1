@@ -3,7 +3,19 @@ const app = express(); //ejecutar express
 const port = 3000; //crear un puerto
 app.use(express.json()); //Utilizar JSON
 const mongoose = require("mongoose") //Requerir mongoose
-const cors = require('cors')
+const cors = require('cors');
+
+const whitelist = ['http://localhost:3001', 'http://localhost:3000'];
+const options = {
+  origin: (origin, callback) => {
+    if (whitelist.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('no permitido'));
+    }
+  }
+}
+app.use(cors(options));
 
 async function main() {
     //Conectando con la base de datos
@@ -18,7 +30,8 @@ const customerSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
     identificationNumber: Number,
-    dateOfBirth: String
+    dateOfBirth: String,
+    hasSpent: Number
 });
 
 const Customers = mongoose.model("Customers", customerSchema);

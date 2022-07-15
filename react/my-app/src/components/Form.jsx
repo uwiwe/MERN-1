@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Form(){
-    const [firstName, setfirstName] = useState("");
-    const [lastName, setlastName] = useState("");
-    const [identificationNumber, setidentificationNumber] = useState("");
-    const [dateOfBirth, setdateOfBirth] = useState("");
-    const [phoneNumber, setphoneNumber] = useState("");
+    const [firstName, setfirstName] = useState(null);
+    const [lastName, setlastName] = useState(null);
+    const [identificationNumber, setidentificationNumber] = useState(null);
+    const [dateOfBirth, setdateOfBirth] = useState(null);
+    const [phoneNumber, setphoneNumber] = useState(null);
 
     return (
         <form>
