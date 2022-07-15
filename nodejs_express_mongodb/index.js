@@ -3,6 +3,7 @@ const app = express(); //ejecutar express
 const port = 3000; //crear un puerto
 app.use(express.json()); //Utilizar JSON
 const mongoose = require("mongoose") //Requerir mongoose
+const cors = require('cors')
 
 async function main() {
     //Conectando con la base de datos

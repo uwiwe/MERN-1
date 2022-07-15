@@ -45,7 +45,7 @@ function Form(){
                             type="text"
                             onChange={(e) => {setphoneNumber(e.target.value)}}/>
                                 <Link to="/">
-                                    <button class="lg:pt-2 text-center lg:pr-3.5 lg:pl-3 lg:pb-2 lg:text-2xl text-white bg-purple-700 lg:rounded-lg lg:mt-6 lg:mb-36" type="submit">Submit</button>
+                                <button class="lg:pt-3 text-center lg:pr-6 lg:pl-5 lg:pb-3 lg:text-2xl text-white bg-purple-600 lg:rounded-2xl lg:mt-6 lg:mb-36" type="submit">Submit</button>
                                 </Link>
                 </div>
             </div>
